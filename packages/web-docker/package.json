@@ -1,11 +1,12 @@
 {
   "name": "@starter-project/web-docker",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "lfdiaz <your_email_address@example.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/web-docker.js",
+  "main": "src/index.js",
+  "private": true,
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -15,5 +16,9 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.3.5",
+    "redux-logger": "^3.0.6"
   }
 }

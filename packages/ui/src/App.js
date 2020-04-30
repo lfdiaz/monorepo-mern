@@ -4,31 +4,23 @@ import Home from "./pages/Home";
 import { ThemeProvider } from "@material-ui/core";
 import theme from "./theme";
 import "./App.css";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
-import Products from "./components/Products";
+import { Provider } from "react-redux";
+import { store } from "@starter-project/web-docker";
 
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <Router>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/login" exact>
-              <Login />
-            </Route>
-            <Route path="/signup" exact>
-              <Signup />
-            </Route>
-            <Route path="/products" exact>
-              <Products />
-            </Route>
-          </Switch>
-        </Router>
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+            </Switch>
+          </Router>
+        </ThemeProvider>
+      </Provider>
     </div>
   );
 }
