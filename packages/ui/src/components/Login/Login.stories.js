@@ -1,8 +1,11 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
+import Login from "./Login";
 
 export default {
   title: "Login"
 };
 
-export const Text = () => <div onClick={action("clicked")}>Hello Button</div>;
+export const Component = () => {
+  return <Login />;
+};
