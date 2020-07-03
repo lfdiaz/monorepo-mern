@@ -9,9 +9,6 @@
     "concurrently": "^5.1.0"
   },
   "scripts": {
-    "client": "cd packages/ui && yarn run startDev",
-    "server": "cd packages/backend && yarn run startDev",
-    "startDev": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "start": "CI=true lerna run startDev --stream",
     "storybook": "lerna run storybook --stream"
   }
